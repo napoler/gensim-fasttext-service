@@ -26,7 +26,7 @@ An example repository to build the Docker container that exposes the `most_simil
 The `topn` is set to be `10` by default:
 
 ```bash
-> curl -X POST -F "word=toys"  localhost:8080/most-similar                                                           (base)
+> curl -X POST -F "word=toys"  localhost:8080/most-similar
 ["and","spinner","hijacked","initial","sand","negelected","land","hand","december","hijackings"]
 ```
 
