@@ -23,6 +23,13 @@ An example repository to build the Docker container that exposes the `most_simil
 ["and","spinner","sand","initial","negelected"]
 ```
 
+The `topn` is set to be `10` by default:
+
+```bash
+> curl -X POST -F "word=toys"  localhost:8080/most-similar                                                           (base)
+["and","spinner","hijacked","initial","sand","negelected","land","hand","december","hijackings"]
+```
+
 ### `/health-check`
 
 ```bash
