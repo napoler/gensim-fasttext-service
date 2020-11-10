@@ -2,16 +2,24 @@
 
 An example repository to build the Docker container that exposes the `most_similar` API.
 
-## Build
+## Install
+
+It depends on [pipenv](https://pipenv.pypa.io/en/latest/) to install packages.
 
 ```bash
-> docker build -t gensim_fasttext_service .
+pipenv install
+```
+
+## Build Model
+
+```bash
+> pipenv run python -m script.build_model
 ```
 
 ## Run
 
 ```bash
-> docker run -d -p 8080:80 -it gensim_fasttext_service
+> pipenv run gunicorn service.app:app -c ./gunicorn.py --worker-connections 100
 ```
 
 ## APIs
