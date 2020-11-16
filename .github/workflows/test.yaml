@@ -31,7 +31,9 @@ jobs:
     - name: Start server
       run: |
         poetry run python -m script.build_model
-        poetry run gunicorn service.app:app -c ./gunicorn.py --worker-connections 100
+        poetry run gunicorn service.app:app --daemon -c ./gunicorn.py --worker-connections 100
 
     - name: Simple test connection by CURL
-      run: curl -X POST -F "word=toys" -F "topn=20" localhost:8080/most-similar | echo
+      run: |
+        curl -X GET localhost:8080/health-check | cat
+        curl -X POST -F "word=toys" -F "topn=20" localhost:8080/most-similar | cat && echo "SUCCESS!"
