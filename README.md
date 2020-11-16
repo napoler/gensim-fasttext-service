@@ -1,22 +1,30 @@
 # Gensim FastText Service
 
-An example repository to build the Docker container that exposes the `most_similar` API.
+A demo web service wrapping up Gensim's FastText model and similarity query.
 
 ## Install
 
-Not finished ...
+Simply run:
 
-## Build Model
+```bash
+> python install -r requirements.txt
+```
+
+**Using a virtual environment is highly recommended.**
+
+Before starting the web service, build the FastText model by running:
 
 ```bash
 > python -m script.build_model
 ```
 
-## Run
+## Start the server
 
 ```bash
 > gunicorn service.app:app -c ./gunicorn.py --worker-connections 100
 ```
+
+Users can configure the way of how to start the service in `gunicorn.py`.
 
 ## APIs
 
@@ -30,7 +38,7 @@ Not finished ...
 The `topn` is set to be `10` by default:
 
 ```bash
-> curl -X POST -F "word=toys"  localhost:8080/most-similar
+> curl -X POST -F "word=toys" "localhost:8080/most-similar"
 ["and","spinner","hijacked","initial","sand","negelected","land","hand","december","hijackings"]
 ```
 
