@@ -4,11 +4,7 @@ An example repository to build the Docker container that exposes the `most_simil
 
 ## Install
 
-It depends on [pipenv](https://pipenv.pypa.io/en/latest/) to install packages.
-
-```bash
-pipenv install
-```
+Not finished ...
 
 ## Build Model
 
