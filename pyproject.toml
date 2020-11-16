@@ -1,6 +1,6 @@
 [tool.black]
 line-length = 88
-target-version = ['py38']
+target-version = ['py36', 'py37', 'py38']
 include = '\.pyi?$'
 exclude = '''
 /(
@@ -16,3 +16,25 @@ exclude = '''
   | dist
 )/
 '''
+
+[tool.poetry]
+name = "gensim-fasttext-service"
+version = "0.1.0"
+description = "A demo web service wrapping up Gensim's FastText model and similarity query."
+authors = ["Tianyu Gu <gty@franz.com>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.6"
+gensim = "3.8.3"
+flask = "1.1.2"
+gunicorn = "20.0.4"
+gevent = "^20.9.0"
+
+[tool.poetry.dev-dependencies]
+black = "*"
+pytest = "^3.4"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

@@ -4,22 +4,18 @@ An example repository to build the Docker container that exposes the `most_simil
 
 ## Install
 
-It depends on [pipenv](https://pipenv.pypa.io/en/latest/) to install packages.
-
-```bash
-pipenv install
-```
+Not finished ...
 
 ## Build Model
 
 ```bash
-> pipenv run python -m script.build_model
+> python -m script.build_model
 ```
 
 ## Run
 
 ```bash
-> pipenv run gunicorn service.app:app -c ./gunicorn.py --worker-connections 100
+> gunicorn service.app:app -c ./gunicorn.py --worker-connections 100
 ```
 
 ## APIs
