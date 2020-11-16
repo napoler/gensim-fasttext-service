@@ -13,13 +13,13 @@ pipenv install
 ## Build Model
 
 ```bash
-> pipenv run python -m script.build_model
+> python -m script.build_model
 ```
 
 ## Run
 
 ```bash
-> pipenv run gunicorn service.app:app -c ./gunicorn.py --worker-connections 100
+> gunicorn service.app:app -c ./gunicorn.py --worker-connections 100
 ```
 
 ## APIs
