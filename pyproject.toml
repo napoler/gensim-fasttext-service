@@ -22,7 +22,7 @@ name = "gensim-fasttext-service"
 version = "0.1.0"
 description = "A demo web service wrapping up Gensim's FastText model and similarity query."
 authors = ["Tianyu Gu <gty@franz.com>"]
-license = "MIT"
+readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.6"
@@ -33,6 +33,7 @@ gevent = "^20.9.0"
 
 [tool.poetry.dev-dependencies]
 black = "*"
+pytest = "^6.1.2"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
