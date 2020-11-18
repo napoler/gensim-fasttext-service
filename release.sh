@@ -10,7 +10,7 @@ cp -r script $DIST/
 cp -r service $DIST/
 cp gunicorn.py $DIST/
 cp requirements.txt $DIST/
-cp doc.pdf $DIST/
+cp doc.html $DIST/
 
 zip -r gensim-fasttext-service.zip $DIST/ -x "*__pycache__*"
 
