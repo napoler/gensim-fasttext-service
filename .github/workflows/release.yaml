@@ -17,7 +17,7 @@ jobs:
     - name: Convert md to html
       uses: docker://pandoc/core:latest
       with:
-        args: -s README.md -t html -o doc.html  --metadata title="FastText Web Service for AG"
+        args: -s README.md -t html -o doc.html
 
     - name: Create Zip Archive
       run: sh ./release.sh

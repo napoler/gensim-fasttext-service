@@ -1,4 +1,4 @@
-# Gensim FastText Service
+# "FastText Web Service for AG
 
 A web service wrapping up Gensim's FastText model and similarity query based on [lee_background corpus](https://github.com/RaRe-Technologies/gensim/blob/develop/gensim/test/test_data/lee_background.cor).
 
