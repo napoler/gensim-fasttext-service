@@ -14,6 +14,14 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
+    - name: Convert md to pdf
+      uses: docker://pandoc/core:latest
+      with:
+        args: |>
+          README.md
+          -o
+          doc.pdf
+
     - name: Create Zip Archive
       run: sh ./release.sh
 
