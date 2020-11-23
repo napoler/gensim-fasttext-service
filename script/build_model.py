@@ -1,7 +1,7 @@
 """
 File: build_model.py
 Created Date: Monday, 2nd November 2020 9:30:11 am
-Author: Tianyu Gu (macdavid313@gmail.com)
+Author: Tianyu Gu (gty@franz.com)
 """
 
 import logging

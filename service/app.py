@@ -1,7 +1,7 @@
 """
 File: app.py
 Created Date: Monday, 2nd November 2020 9:18:53 am
-Author: Tianyu Gu (macdavid313@gmail.com)
+Author: Tianyu Gu (gty@franz.com)
 """
 
 
