@@ -1,3 +1,5 @@
+#!/bin/sh
+
 DIST="gensim-fasttext-service"
 
 echo "gensim==3.8.3
@@ -10,9 +12,12 @@ cp -r script $DIST/
 cp -r service $DIST/
 cp gunicorn.py $DIST/
 cp requirements.txt $DIST/
+
+pandoc -s README.md -t html -o doc.html
 cp doc.html $DIST/
 
-zip -r gensim-fasttext-service.zip $DIST/ -x "*__pycache__*"
+tar czvf gensim-fasttext-service.tar.gz --exclude="*__pycache__*" $DIST/
 
 rm -f requirements.txt
 rm -rf $DIST
+rm *.html
